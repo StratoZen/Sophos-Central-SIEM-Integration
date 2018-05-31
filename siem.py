@@ -269,7 +269,7 @@ def write_keyvalue_format(results, siem_logger):
         date = i[u'rt']
         # TODO:  Spaces/quotes/semicolons are not escaped here, does it matter?
         events = list('%s="%s";' % (k, v) for k, v in i.items())
-        siem_logger.info(' '.join([date, ] + events) + u'\n')
+        siem_logger.info("SophosCentral" + ' '.join([date, ] + events) + u'\n')
 
 
 def write_cef_format(results, siem_logger):
